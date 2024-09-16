@@ -8,13 +8,20 @@
       onClick: {
         type: Function,
         required: false
+      },
+      styleClass: {
+        type: String,
+        required: false
       }
     }
   }
 </script>
 
 <template>
-  <button @click="this.onClick">
+  <button
+      @click="this.onClick"
+      :class="styleClass"
+  >
     {{ this.title }}
   </button>
 </template>
